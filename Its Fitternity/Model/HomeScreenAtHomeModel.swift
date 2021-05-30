@@ -14,6 +14,7 @@ struct HomeScreenAtHomeDataModel: Codable {
      let instudio: String?
      let product_tags: [product_tags]?
      let campaigns: [CampaignElement]?
+     let categories: Categories?
      let onepassPre: OnepassPre?
      let personalTraining: PersonalTraining?
      let upcomingClasses: UpcomingClasses?
@@ -31,6 +32,29 @@ struct HomeScreenAtHomeDataModel: Codable {
      let ratio: Double?
      let order: Int?
  }
+
+// MARK: - Categories
+struct Categories: Codable {
+    let title, text: String?
+    let maxCategory: Int?
+    let allCategoryTitle: String?
+    let categorytags: [Categorytag]?
+    let campaign: CategoriesCampaign?
+}
+
+// MARK: - CategoriesCampaign
+struct CategoriesCampaign: Codable {
+    let image: String?
+    let title, bgColor, textColor: String?
+    let url: String?
+}
+
+// MARK: - Categorytag
+struct Categorytag: Codable {
+    let name, slug: String?
+    let id: Int?
+    let image: String?
+}
 
  // MARK: - Challenge
  struct Challenge: Codable {
