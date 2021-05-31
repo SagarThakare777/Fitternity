@@ -73,7 +73,9 @@ class DiscoverEventsVC: UIViewController {
         self.bannerCollectionView.dataSource = self
         self.bannerCollectionView.reloadData()
         
-        self.multipleDataCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kCategoryCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kCategoryCollectionViewCell)
+        //self.multipleDataCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kCategoryCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kCategoryCollectionViewCell)
+        
+        self.multipleDataCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell)
         
         self.multipleDataCollectionView.delegate = self
         self.multipleDataCollectionView.dataSource = self
@@ -160,7 +162,9 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
             return CGSize(width: 342, height: 173)
         }
         else {
-            return CGSize(width: (multipleDataCollectionView.frame.size.width - 20), height: 175)
+            //return CGSize(width: (multipleDataCollectionView.frame.size.width - 20), height: 175)
+            
+            return CGSize(width: multipleDataCollectionView.frame.size.width, height: multipleDataCollectionView.frame.size.height)
         }
     }
     
@@ -192,12 +196,22 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
             return cellBanner
         }
         else {
-            
+            /*
             let cellMultipleData: CategoryCollectionViewCell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: CollectionViewCellIdentifire.kCategoryCollectionViewCell, for: indexPath) as! CategoryCollectionViewCell
 
             cellMultipleData.lblTitle.text      = self.arrCategory?.title
             cellMultipleData.lblText.text       = self.arrCategory?.text
+            cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
+            cellMultipleData.categoryCollectionView.reloadData()
+            return cellMultipleData
+            */
+            
+            let cellMultipleData: WorkOutInStudioCollectionViewCell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell, for: indexPath) as! WorkOutInStudioCollectionViewCell
+
+//            cellMultipleData.lblTitle.text      = self.arrCategory?.title
+//            cellMultipleData.lblText.text       = self.arrCategory?.text
             cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
             cellMultipleData.categoryCollectionView.reloadData()
             return cellMultipleData

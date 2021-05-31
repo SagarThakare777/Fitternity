@@ -22,6 +22,7 @@ struct CollectionViewCellIdentifire {
     static let kBannerCollectionViewCell        = "BannerCollectionViewCell"
     static let kCategoryCollectionViewCell      = "CategoryCollectionViewCell"
     static let kSubCategoryCollectionViewCell   = "SubCategoryCollectionViewCell"
+    static let kWorkOutInStudioCollectionViewCell   = "WorkOutInStudioCollectionViewCell"
 }
 
 struct color {
