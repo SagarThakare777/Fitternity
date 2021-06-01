@@ -42,13 +42,13 @@ struct fitness_centres: Codable {
 
 // MARK: - FitnessCentresDatum
 struct FitnessCentresDatum: Codable {
-    let averageRating: Double?
+    let average_rating: Double?
     let coverimage: String?
     let location, slug: String?
     let id: Int?
     let categorytags: [String]?
     let category: String?
-    let totalRatingCount: Int?
+    let total_rating_count: Int?
     let flags: DatumFlagsClass?
     let commercial: String?
     let featured: Bool?
@@ -58,7 +58,7 @@ struct FitnessCentresDatum: Codable {
     let membershipOfferDefault: Bool?
     let membershipOffer, type, address, title: String?
     let subcategories: [String]?
-    let tagImage: String?
+    let tag_image: String?
     let abwVendor: String?
 }
 

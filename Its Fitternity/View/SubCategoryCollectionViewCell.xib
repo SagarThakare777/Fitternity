@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-Ur-huZ">
-                        <rect key="frame" x="5" y="139" width="160" height="26"/>
+                        <rect key="frame" x="5" y="139" width="160" height="14.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="160" id="q2m-As-cct"/>
                         </constraints>
@@ -40,7 +40,6 @@
                 <constraint firstAttribute="trailing" secondItem="0VO-Ur-huZ" secondAttribute="trailing" constant="5" id="GTd-jt-pBa"/>
                 <constraint firstItem="f0n-k3-hLM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="IAK-eo-qgB"/>
                 <constraint firstItem="0VO-Ur-huZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="SIL-Pr-u3T"/>
-                <constraint firstAttribute="bottom" secondItem="0VO-Ur-huZ" secondAttribute="bottom" constant="5" id="WJT-l4-rf1"/>
                 <constraint firstItem="f0n-k3-hLM" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="gWw-lo-FYj"/>
                 <constraint firstItem="0VO-Ur-huZ" firstAttribute="top" secondItem="f0n-k3-hLM" secondAttribute="bottom" constant="4" id="yeZ-Vs-ch6"/>
             </constraints>

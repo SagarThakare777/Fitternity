@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WorkOutInStudioCollectionViewCell" customModule="Its_Fitternity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="1003"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="1003"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover &amp; Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89w-1Z-joS">
+                        <rect key="frame" x="10" y="175" width="218" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8P-ra-GTJ">
+                        <rect key="frame" x="233" y="171.5" width="70" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Vfs-c6-VTf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                        <state key="normal" title="VIEW ALL">
+                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjS-YX-iz4">
+                        <rect key="frame" x="244" y="480" width="59" height="35"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                        <state key="normal" title="VIEW ALL">
+                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore Gyms &amp; Fitness Centers in Mumbai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNe-xS-HeH">
+                        <rect key="frame" x="10" y="200" width="298" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6Aq-dC-lqy" userLabel="categoryCollectionView">
+                        <rect key="frame" x="10" y="229" width="298" height="180"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="Gm3-dq-QRg"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HJt-8w-d6F">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBn-vj-XhZ" userLabel="vwBuyNow">
+                        <rect key="frame" x="10" y="424" width="298" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.rotation" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g8m-Qo-cEi">
+                                <rect key="frame" x="10" y="13" width="25" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="2qw-uS-FPI"/>
+                                    <constraint firstAttribute="width" constant="25" id="ada-SA-kh4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Now, Start Later | Booking Will Resume Once Gyms Restart" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gd-KG-2HH">
+                                <rect key="frame" x="43" y="7.5" width="245" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="0.42837150523204676" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="6UK-lq-DuA"/>
+                            <constraint firstItem="g8m-Qo-cEi" firstAttribute="centerY" secondItem="yBn-vj-XhZ" secondAttribute="centerY" id="DbS-I0-KQd"/>
+                            <constraint firstItem="0gd-KG-2HH" firstAttribute="leading" secondItem="g8m-Qo-cEi" secondAttribute="trailing" constant="8" symbolic="YES" id="UzH-n7-Fue"/>
+                            <constraint firstItem="0gd-KG-2HH" firstAttribute="centerY" secondItem="yBn-vj-XhZ" secondAttribute="centerY" id="XmE-YE-G5R"/>
+                            <constraint firstAttribute="trailing" secondItem="0gd-KG-2HH" secondAttribute="trailing" constant="10" id="fQ7-yj-XOo"/>
+                            <constraint firstItem="g8m-Qo-cEi" firstAttribute="leading" secondItem="yBn-vj-XhZ" secondAttribute="leading" constant="10" id="xj8-Sf-cne"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness Centres in Mumbai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-3K-3Sw">
+                        <rect key="frame" x="10" y="489" width="229" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kNJ-qD-mDR" userLabel="fitnessCenterCollectionView">
+                        <rect key="frame" x="10" y="554" width="298" height="190"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="190" id="XSO-Yv-i4q"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UJy-Vv-Ocy">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE ALL-IN-ONE FITNESS MEMBERSHIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRY-qc-KDl">
+                        <rect key="frame" x="10" y="788" width="298" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-HA-2sW">
+                        <rect key="frame" x="10" y="812.5" width="298" height="110"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-24-pbs">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="YMb-94-SFx"/>
+                                    <constraint firstAttribute="height" constant="110" id="wEk-Oh-sKk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb0-bi-mL2">
+                                <rect key="frame" x="120" y="0.0" width="168" height="110"/>
+                                <string key="text">The all-in-one fitness membership - OnePass gives access 12,000+ top gyms &amp; studios across India with “Best-In-Safety” standards</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONEPASS" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-r7-gAo">
+                                <rect key="frame" x="29" y="10" width="52.5" height="13.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNLIMITTED ACCESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzS-Qm-4EN">
+                                <rect key="frame" x="0.0" y="33.5" width="110" height="10"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gzS-Qm-4EN" firstAttribute="leading" secondItem="yx5-24-pbs" secondAttribute="leading" id="2Ki-bi-Urc"/>
+                            <constraint firstItem="yx5-24-pbs" firstAttribute="leading" secondItem="bWJ-HA-2sW" secondAttribute="leading" id="6iq-nl-VNu"/>
+                            <constraint firstItem="gzS-Qm-4EN" firstAttribute="top" secondItem="Zc0-r7-gAo" secondAttribute="bottom" constant="10" id="GR0-us-63l"/>
+                            <constraint firstAttribute="trailing" secondItem="bb0-bi-mL2" secondAttribute="trailing" constant="10" id="Gnm-sF-Ldw"/>
+                            <constraint firstAttribute="height" constant="110" id="Vch-iW-2UN"/>
+                            <constraint firstItem="yx5-24-pbs" firstAttribute="top" secondItem="bWJ-HA-2sW" secondAttribute="top" id="adX-hi-Pvm"/>
+                            <constraint firstItem="gzS-Qm-4EN" firstAttribute="trailing" secondItem="yx5-24-pbs" secondAttribute="trailing" id="b93-fU-t9Y"/>
+                            <constraint firstItem="bb0-bi-mL2" firstAttribute="top" secondItem="bWJ-HA-2sW" secondAttribute="top" id="kdZ-xE-rnI"/>
+                            <constraint firstItem="bb0-bi-mL2" firstAttribute="leading" secondItem="yx5-24-pbs" secondAttribute="trailing" constant="10" id="oOw-zR-rnf"/>
+                            <constraint firstAttribute="bottom" secondItem="bb0-bi-mL2" secondAttribute="bottom" id="qwy-hO-Gcl"/>
+                            <constraint firstItem="Zc0-r7-gAo" firstAttribute="top" secondItem="bWJ-HA-2sW" secondAttribute="top" constant="10" id="z6R-kL-0Th"/>
+                            <constraint firstItem="Zc0-r7-gAo" firstAttribute="centerX" secondItem="yx5-24-pbs" secondAttribute="centerX" id="zIM-Vh-FPl"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJL-hG-gf0">
+                        <rect key="frame" x="244" y="754" width="59" height="27"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                        <state key="normal" title="VIEW ALL">
+                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0Q-vW-mHg" userLabel="vwBuyNow">
+                        <rect key="frame" x="10" y="932.5" width="298" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discount" translatesAutoresizingMaskIntoConstraints="NO" id="G6K-ST-2Rp">
+                                <rect key="frame" x="10" y="12.5" width="25" height="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="eba-vC-lUJ"/>
+                                    <constraint firstAttribute="height" constant="25" id="wqb-IS-4fr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Now, Start Later | Booking Will Resume Once Gyms Restart" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atr-sl-YNj">
+                                <rect key="frame" x="43" y="7.5" width="245" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="0.4283715052" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G6K-ST-2Rp" firstAttribute="centerY" secondItem="X0Q-vW-mHg" secondAttribute="centerY" id="AfM-2J-LhG"/>
+                            <constraint firstItem="atr-sl-YNj" firstAttribute="centerY" secondItem="X0Q-vW-mHg" secondAttribute="centerY" id="Px7-br-jp6"/>
+                            <constraint firstItem="atr-sl-YNj" firstAttribute="leading" secondItem="G6K-ST-2Rp" secondAttribute="trailing" constant="8" symbolic="YES" id="isi-C9-Xyt"/>
+                            <constraint firstItem="G6K-ST-2Rp" firstAttribute="leading" secondItem="X0Q-vW-mHg" secondAttribute="leading" constant="10" id="kAp-Rl-8WH"/>
+                            <constraint firstAttribute="trailing" secondItem="atr-sl-YNj" secondAttribute="trailing" constant="10" id="tJW-tO-GyJ"/>
+                            <constraint firstAttribute="height" constant="50" id="xyC-di-2NA"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b51-1f-DU1">
+                        <rect key="frame" x="10" y="754" width="100" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="FlR-N6-62T"/>
+                            <constraint firstAttribute="width" constant="100" id="npY-pF-h54"/>
+                        </constraints>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S8S-ft-u6G">
+                        <rect key="frame" x="0.0" y="10" width="318" height="150"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="y2X-dX-Bxu"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HIf-kx-haZ">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check top gyms &amp; fitness centers near you with the best safety standards" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-ms-xA8">
+                        <rect key="frame" x="10" y="516" width="298" height="28"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="6Aq-dC-lqy" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="0Om-o1-LsI"/>
+                <constraint firstItem="rjS-YX-iz4" firstAttribute="leading" secondItem="ueo-3K-3Sw" secondAttribute="trailing" constant="5" id="3pM-Ru-qoV"/>
+                <constraint firstAttribute="trailing" secondItem="bWJ-HA-2sW" secondAttribute="trailing" constant="10" id="40W-s6-SNg"/>
+                <constraint firstItem="yBn-vj-XhZ" firstAttribute="top" secondItem="6Aq-dC-lqy" secondAttribute="bottom" constant="15" id="4MO-uF-LfM"/>
+                <constraint firstItem="X0Q-vW-mHg" firstAttribute="top" secondItem="bWJ-HA-2sW" secondAttribute="bottom" constant="10" id="5PG-JO-xCf"/>
+                <constraint firstItem="b51-1f-DU1" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="6G9-0z-sab"/>
+                <constraint firstItem="S8S-ft-u6G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6Ty-mA-7EV"/>
+                <constraint firstItem="bWJ-HA-2sW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="9gM-P9-lHN"/>
+                <constraint firstItem="ueo-3K-3Sw" firstAttribute="top" secondItem="yBn-vj-XhZ" secondAttribute="bottom" constant="15" id="A5b-i7-BVv"/>
+                <constraint firstAttribute="trailing" secondItem="X0Q-vW-mHg" secondAttribute="trailing" constant="10" id="AW8-0D-HjQ"/>
+                <constraint firstItem="EJL-hG-gf0" firstAttribute="trailing" secondItem="O8P-ra-GTJ" secondAttribute="trailing" id="BKW-eL-oCi"/>
+                <constraint firstItem="b51-1f-DU1" firstAttribute="top" secondItem="kNJ-qD-mDR" secondAttribute="bottom" constant="10" id="BLJ-ej-Bbk"/>
+                <constraint firstItem="EJL-hG-gf0" firstAttribute="width" secondItem="O8P-ra-GTJ" secondAttribute="width" multiplier="0.842857" id="BiW-gZ-eSo"/>
+                <constraint firstItem="rjS-YX-iz4" firstAttribute="trailing" secondItem="O8P-ra-GTJ" secondAttribute="trailing" id="CXp-q0-Rgs"/>
+                <constraint firstItem="ueo-3K-3Sw" firstAttribute="centerY" secondItem="rjS-YX-iz4" secondAttribute="centerY" id="D3q-IZ-L1o"/>
+                <constraint firstAttribute="trailing" secondItem="S8S-ft-u6G" secondAttribute="trailing" id="DFk-7F-lWW"/>
+                <constraint firstItem="89w-1Z-joS" firstAttribute="top" secondItem="S8S-ft-u6G" secondAttribute="bottom" constant="15" id="DTP-3Z-Hyn"/>
+                <constraint firstAttribute="bottom" secondItem="X0Q-vW-mHg" secondAttribute="bottom" constant="20.5" id="FOg-ym-hhz"/>
+                <constraint firstItem="O8P-ra-GTJ" firstAttribute="leading" secondItem="89w-1Z-joS" secondAttribute="trailing" constant="5" id="Hm2-e1-jx3"/>
+                <constraint firstItem="6Aq-dC-lqy" firstAttribute="top" secondItem="aNe-xS-HeH" secondAttribute="bottom" constant="15" id="JCL-vJ-OpI"/>
+                <constraint firstItem="89w-1Z-joS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="K3o-90-huO"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="qRY-qc-KDl" secondAttribute="trailing" constant="10" id="KWg-Os-B1m"/>
+                <constraint firstItem="qRY-qc-KDl" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="OAM-2p-aSO"/>
+                <constraint firstItem="kNJ-qD-mDR" firstAttribute="top" secondItem="IRD-ms-xA8" secondAttribute="bottom" constant="10" id="Sfq-H2-xlt"/>
+                <constraint firstAttribute="trailing" secondItem="O8P-ra-GTJ" secondAttribute="trailing" constant="15" id="UgV-ee-qta"/>
+                <constraint firstItem="89w-1Z-joS" firstAttribute="centerY" secondItem="O8P-ra-GTJ" secondAttribute="centerY" id="VBU-tk-GI1"/>
+                <constraint firstAttribute="trailing" secondItem="IRD-ms-xA8" secondAttribute="trailing" constant="10" id="XpX-Nh-RXf"/>
+                <constraint firstItem="kNJ-qD-mDR" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="ZnR-MU-ym9"/>
+                <constraint firstItem="X0Q-vW-mHg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="bE4-su-OgK"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="kNJ-qD-mDR" secondAttribute="trailing" constant="10" id="cTz-P4-SOI"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="6Aq-dC-lqy" secondAttribute="trailing" constant="10" id="ctw-nE-7XE"/>
+                <constraint firstItem="ueo-3K-3Sw" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="eql-bH-ZDl"/>
+                <constraint firstItem="IRD-ms-xA8" firstAttribute="top" secondItem="ueo-3K-3Sw" secondAttribute="bottom" constant="10" id="fjX-J6-Hgc"/>
+                <constraint firstItem="EJL-hG-gf0" firstAttribute="top" secondItem="kNJ-qD-mDR" secondAttribute="bottom" constant="10" id="iqe-i1-rlr"/>
+                <constraint firstItem="IRD-ms-xA8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="mEh-Dj-vry"/>
+                <constraint firstItem="bWJ-HA-2sW" firstAttribute="top" secondItem="qRY-qc-KDl" secondAttribute="bottom" constant="7" id="ndw-4j-YWn"/>
+                <constraint firstItem="S8S-ft-u6G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="nlc-0G-JjI"/>
+                <constraint firstItem="qRY-qc-KDl" firstAttribute="top" secondItem="b51-1f-DU1" secondAttribute="bottom" constant="5" id="vjD-al-rYd"/>
+                <constraint firstItem="rjS-YX-iz4" firstAttribute="width" secondItem="O8P-ra-GTJ" secondAttribute="width" multiplier="0.842857" id="vpU-SJ-QTi"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="yBn-vj-XhZ" secondAttribute="trailing" constant="10" id="wXY-Gs-L0O"/>
+                <constraint firstItem="aNe-xS-HeH" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="x1A-JH-qry"/>
+                <constraint firstItem="rjS-YX-iz4" firstAttribute="top" secondItem="yBn-vj-XhZ" secondAttribute="bottom" constant="6" id="ylC-59-qjG"/>
+                <constraint firstItem="yBn-vj-XhZ" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="ytj-A9-LdO"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="aNe-xS-HeH" secondAttribute="trailing" constant="10" id="zkW-gr-25g"/>
+                <constraint firstItem="aNe-xS-HeH" firstAttribute="top" secondItem="89w-1Z-joS" secondAttribute="bottom" constant="5" id="zzW-5o-nS6"/>
+            </constraints>
+            <size key="customSize" width="318" height="1003"/>
+            <connections>
+                <outlet property="bannerCollectionView" destination="S8S-ft-u6G" id="MWB-zV-Zrq"/>
+                <outlet property="categoryCollectionView" destination="6Aq-dC-lqy" id="QCg-mt-ZBl"/>
+                <outlet property="fitnessCentersCollectionView" destination="kNJ-qD-mDR" id="ZsD-v3-KHa"/>
+                <outlet property="imgMainOnePass" destination="b51-1f-DU1" id="LaA-E0-3Xs"/>
+                <outlet property="imgOnePass" destination="yx5-24-pbs" id="e8m-55-bTU"/>
+                <outlet property="lblAccessTo" destination="bb0-bi-mL2" id="geV-uY-UAX"/>
+                <outlet property="lblCheck" destination="IRD-ms-xA8" id="du2-ed-W9M"/>
+                <outlet property="lblDiscover" destination="89w-1Z-joS" id="STq-tC-eSt"/>
+                <outlet property="lblExploreGym" destination="aNe-xS-HeH" id="9kU-NV-KI6"/>
+                <outlet property="lblFitnessCenter" destination="ueo-3K-3Sw" id="RNb-fE-flK"/>
+                <outlet property="lblTheAllInOne" destination="qRY-qc-KDl" id="1zK-BN-UPN"/>
+                <outlet property="vwBuyNow" destination="yBn-vj-XhZ" id="uZD-rv-4tN"/>
+            </connections>
+            <point key="canvasLocation" x="323.1884057971015" y="421.54017857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="discount" width="32" height="32"/>
+        <image name="lock.rotation" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

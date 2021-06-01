@@ -31,6 +31,8 @@
 		B03250202663E6A00004B73E /* HomeScreenInStudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032501F2663E6A00004B73E /* HomeScreenInStudioModel.swift */; };
 		B0330C882665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */; };
 		B0330C892665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */; };
+		B051B4892666D72C00960627 /* WorkOutAtHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051B4872666D72C00960627 /* WorkOutAtHomeCollectionViewCell.swift */; };
+		B051B48A2666D72C00960627 /* WorkOutAtHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B051B4882666D72C00960627 /* WorkOutAtHomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		B032501F2663E6A00004B73E /* HomeScreenInStudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInStudioModel.swift; sourceTree = "<group>"; };
 		B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCentersCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FitnessCentersCollectionViewCell.xib; sourceTree = "<group>"; };
+		B051B4872666D72C00960627 /* WorkOutAtHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutAtHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B051B4882666D72C00960627 /* WorkOutAtHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkOutAtHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		F992DD339CA8CED65CF95CD5 /* Pods_Its_Fitternity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Its_Fitternity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,8 @@
 		B0324F9E26635E680004B73E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B051B4852666D6BD00960627 /* WorkOut at Home */,
+				B051B4842666D6A800960627 /* WorkOut in Studio */,
 				B0324FBA266375E50004B73E /* ProductTagCollectionViewCell.swift */,
 				B0324FBB266375E50004B73E /* ProductTagCollectionViewCell.xib */,
 				B032500F2663B79B0004B73E /* BannerCollectionViewCell.swift */,
@@ -139,8 +145,6 @@
 				B03250162663DA3C0004B73E /* CategoryCollectionViewCell.xib */,
 				B032501A2663DC7E0004B73E /* SubCategoryCollectionViewCell.swift */,
 				B032501B2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib */,
-				B0088D9326654FA900470B07 /* WorkOutInStudioCollectionViewCell.swift */,
-				B0088D9426654FA900470B07 /* WorkOutInStudioCollectionViewCell.xib */,
 				B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */,
 				B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */,
 			);
@@ -164,6 +168,24 @@
 				B0324FEA266381710004B73E /* NetworkRouter.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B051B4842666D6A800960627 /* WorkOut in Studio */ = {
+			isa = PBXGroup;
+			children = (
+				B0088D9326654FA900470B07 /* WorkOutInStudioCollectionViewCell.swift */,
+				B0088D9426654FA900470B07 /* WorkOutInStudioCollectionViewCell.xib */,
+			);
+			path = "WorkOut in Studio";
+			sourceTree = "<group>";
+		};
+		B051B4852666D6BD00960627 /* WorkOut at Home */ = {
+			isa = PBXGroup;
+			children = (
+				B051B4872666D72C00960627 /* WorkOutAtHomeCollectionViewCell.swift */,
+				B051B4882666D72C00960627 /* WorkOutAtHomeCollectionViewCell.xib */,
+			);
+			path = "WorkOut at Home";
 			sourceTree = "<group>";
 		};
 		B85A871E28C400FB66D6446F /* Frameworks */ = {
@@ -237,6 +259,7 @@
 				B032501D2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib in Resources */,
 				B03250182663DA3C0004B73E /* CategoryCollectionViewCell.xib in Resources */,
 				B0324F9526635E150004B73E /* LaunchScreen.storyboard in Resources */,
+				B051B48A2666D72C00960627 /* WorkOutAtHomeCollectionViewCell.xib in Resources */,
 				B0324F9226635E150004B73E /* Assets.xcassets in Resources */,
 				B0324FBD266375E50004B73E /* ProductTagCollectionViewCell.xib in Resources */,
 				B0324F9026635E130004B73E /* Main.storyboard in Resources */,
@@ -299,6 +322,7 @@
 				B03250112663B79B0004B73E /* BannerCollectionViewCell.swift in Sources */,
 				B0324FBC266375E50004B73E /* ProductTagCollectionViewCell.swift in Sources */,
 				B0324F8926635E130004B73E /* AppDelegate.swift in Sources */,
+				B051B4892666D72C00960627 /* WorkOutAtHomeCollectionViewCell.swift in Sources */,
 				B0324FAC26636F3B0004B73E /* DiscoverEventsVC.swift in Sources */,
 				B0324FB5266374E90004B73E /* Utilities.swift in Sources */,
 				B0324FA8266368810004B73E /* SceneDelegate.swift in Sources */,

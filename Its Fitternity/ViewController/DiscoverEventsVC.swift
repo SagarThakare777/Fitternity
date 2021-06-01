@@ -16,7 +16,6 @@ class DiscoverEventsVC: UIViewController {
     //MARK:- Outlets
     //  1. CollectioView
     @IBOutlet weak var productTagCollectionView: UICollectionView!
-    @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var multipleDataCollectionView: UICollectionView!
     //  2. Button
     
@@ -32,12 +31,13 @@ class DiscoverEventsVC: UIViewController {
     
     
     //MARK:- Variables
+    var arrCategory             : Categories?
+    var arrfitness_centres      : fitness_centres?
+    
     var arrProductTag           : [product_tags]?
     var arrCampaign             : [CampaignElement]?
-    var arrCategory             : Categories?
     var arrFitnessCenters       : [FitnessCentresDatum]?
-    var timer                   : Timer?
-    var currentCellIndex        = 0
+    var arrOnePassPre           : OnepassPre?
     var isWorkOutInStudio       : Bool = true
     
     
@@ -51,8 +51,6 @@ class DiscoverEventsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNextScreen), userInfo: nil, repeats: true)
     }
     
     //  1. Configuration of UI
@@ -68,21 +66,15 @@ class DiscoverEventsVC: UIViewController {
         self.productTagCollectionView.dataSource = self
         self.productTagCollectionView.reloadData()
         
-        self.bannerCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kBannerCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kBannerCollectionViewCell)
-        
-        self.bannerCollectionView.delegate = self
-        self.bannerCollectionView.dataSource = self
-        self.bannerCollectionView.reloadData()
-        
-        //self.multipleDataCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kCategoryCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kCategoryCollectionViewCell)
         
         self.multipleDataCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell)
+        
+        self.multipleDataCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kWorkOutAtHomeCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kWorkOutAtHomeCollectionViewCell)
         
         self.multipleDataCollectionView.delegate = self
         self.multipleDataCollectionView.dataSource = self
         self.multipleDataCollectionView.reloadData()
     }
-
     //  3. Workout Studio UI Update
     func workoutInStudioUI(){
         
@@ -111,17 +103,6 @@ class DiscoverEventsVC: UIViewController {
         self.multipleDataCollectionView.isHidden = true
         self.getHomeScreenAtHomeAPICall()
     }
-    //  5. Slide to Next Screen
-    @objc func slideToNextScreen() {
-        
-        if currentCellIndex < (arrCampaign?.count ?? 0 - 1) {
-            currentCellIndex = currentCellIndex + 1
-        }
-        else {
-            currentCellIndex = 0
-        }
-        self.bannerCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
-    }
     //MARK:- All Button Action
     //  1. Work Out in Studio
     @IBAction func workOutInStudioBtnAction(_ sender: Any) {
@@ -145,9 +126,6 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
         if collectionView == productTagCollectionView {
             return self.arrProductTag?.count ?? 0
         }
-        else if collectionView == bannerCollectionView {
-            return self.arrCampaign?.count ?? 0
-        }
         else {
             return 1
         }
@@ -156,15 +134,9 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == productTagCollectionView {
-            
             return CGSize(width: ((productTagCollectionView.frame.size.width - 20)), height: (productTagCollectionView.frame.size.width))
         }
-        else if collectionView == bannerCollectionView {
-            return CGSize(width: 342, height: 173)
-        }
         else {
-            //return CGSize(width: (multipleDataCollectionView.frame.size.width - 20), height: 175)
-            
             return CGSize(width: multipleDataCollectionView.frame.size.width, height: multipleDataCollectionView.frame.size.height)
         }
     }
@@ -186,38 +158,36 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
             
             return cellProduct
         }
-        else if collectionView == bannerCollectionView {
-            
-            let cellBanner: BannerCollectionViewCell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: CollectionViewCellIdentifire.kBannerCollectionViewCell, for: indexPath) as! BannerCollectionViewCell
-            
-            let data = self.arrCampaign?[indexPath.item]
-            
-            cellBanner.imgBanner.sd_setImage(with: URL(string: data?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
-            return cellBanner
-        }
         else {
-            /*
-            let cellMultipleData: CategoryCollectionViewCell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: CollectionViewCellIdentifire.kCategoryCollectionViewCell, for: indexPath) as! CategoryCollectionViewCell
-
-            cellMultipleData.lblTitle.text      = self.arrCategory?.title
-            cellMultipleData.lblText.text       = self.arrCategory?.text
-            cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
-            cellMultipleData.categoryCollectionView.reloadData()
-            return cellMultipleData
-            */
             
-            let cellMultipleData: WorkOutInStudioCollectionViewCell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell, for: indexPath) as! WorkOutInStudioCollectionViewCell
+            if isWorkOutInStudio == true {
+               
+                let cellMultipleData: WorkOutInStudioCollectionViewCell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: CollectionViewCellIdentifire.kWorkOutInStudioCollectionViewCell, for: indexPath) as! WorkOutInStudioCollectionViewCell
 
-//            cellMultipleData.lblTitle.text      = self.arrCategory?.title
-//            cellMultipleData.lblText.text       = self.arrCategory?.text
-            cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
-            cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
-            cellMultipleData.categoryCollectionView.reloadData()
-            cellMultipleData.fitnessCentersCollectionView.reloadData()
-            return cellMultipleData
+                cellMultipleData.arrfitness_centres = self.arrfitness_centres
+                cellMultipleData.arrCategory        = self.arrCategory
+                cellMultipleData.arrCampaign        = self.arrCampaign
+                cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
+                cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
+                cellMultipleData.bannerCollectionView.reloadData()
+                cellMultipleData.categoryCollectionView.reloadData()
+                cellMultipleData.fitnessCentersCollectionView.reloadData()
+                return cellMultipleData
+            }
+            else {
+             
+                let cellMultipleData: WorkOutAtHomeCollectionViewCell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: CollectionViewCellIdentifire.kWorkOutAtHomeCollectionViewCell, for: indexPath) as! WorkOutAtHomeCollectionViewCell
+
+                cellMultipleData.arrfitness_centres = self.arrfitness_centres
+                cellMultipleData.arrCategory        = self.arrCategory
+                cellMultipleData.arrCampaign        = self.arrCampaign
+                cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
+                cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
+                cellMultipleData.bannerCollectionView.reloadData()
+                return cellMultipleData
+            }
         }
     }
     
@@ -243,13 +213,15 @@ extension DiscoverEventsVC {
                 self.arrProductTag?.removeAll()
                 if ((response.data) != nil) {
                     DispatchQueue.main.async {
+                        self.arrfitness_centres = response.value?.fitness_centres
                         self.arrCampaign    = response.value?.campaigns
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
+                        self.arrOnePassPre  = response.value?.onepassPre
                         self.productTagCollectionView.reloadData()
-                        self.bannerCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()
+                        self.configCollectionView()
                     }
                 }
             case .failure(let error):
@@ -268,16 +240,17 @@ extension DiscoverEventsVC {
                 print(successData)
                 KVNProgress.dismiss()
                 
-                self.arrCampaign?.removeAll()
-                self.arrProductTag?.removeAll()
+//                self.arrCampaign?.removeAll()
+//                self.arrProductTag?.removeAll()
                 if ((response.data) != nil) {
                     DispatchQueue.main.async {
+                        self.arrfitness_centres = response.value?.fitness_centres
                         self.arrCampaign    = response.value?.campaigns
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
+                        self.arrOnePassPre  = response.value?.onepassPre
                         self.productTagCollectionView.reloadData()
-                        self.bannerCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()
                     }
                 }
