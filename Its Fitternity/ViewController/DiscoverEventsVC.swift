@@ -35,6 +35,7 @@ class DiscoverEventsVC: UIViewController {
     var arrProductTag           : [product_tags]?
     var arrCampaign             : [CampaignElement]?
     var arrCategory             : Categories?
+    var arrFitnessCenters       : [FitnessCentresDatum]?
     var timer                   : Timer?
     var currentCellIndex        = 0
     var isWorkOutInStudio       : Bool = true
@@ -213,7 +214,9 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
 //            cellMultipleData.lblTitle.text      = self.arrCategory?.title
 //            cellMultipleData.lblText.text       = self.arrCategory?.text
             cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
+            cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
             cellMultipleData.categoryCollectionView.reloadData()
+            cellMultipleData.fitnessCentersCollectionView.reloadData()
             return cellMultipleData
         }
     }
@@ -243,6 +246,7 @@ extension DiscoverEventsVC {
                         self.arrCampaign    = response.value?.campaigns
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
+                        self.arrFitnessCenters = response.value?.fitness_centres?.data
                         self.productTagCollectionView.reloadData()
                         self.bannerCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()
@@ -271,6 +275,7 @@ extension DiscoverEventsVC {
                         self.arrCampaign    = response.value?.campaigns
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
+                        self.arrFitnessCenters = response.value?.fitness_centres?.data
                         self.productTagCollectionView.reloadData()
                         self.bannerCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()

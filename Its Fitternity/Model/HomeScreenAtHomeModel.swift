@@ -18,6 +18,7 @@ struct HomeScreenAtHomeDataModel: Codable {
      let onepassPre: OnepassPre?
      let personalTraining: PersonalTraining?
      let upcomingClasses: UpcomingClasses?
+     let fitness_centres: fitness_centres?
      let challenge: Challenge?
      let fitTv: FitTv?
      let sectionOrders: [String]?
@@ -32,6 +33,56 @@ struct HomeScreenAtHomeDataModel: Codable {
      let ratio: Double?
      let order: Int?
  }
+
+// MARK: - FitnessCentres
+struct fitness_centres: Codable {
+    let title, fitnessCentresDescription, buttonText: String?
+    let data: [FitnessCentresDatum]?
+}
+
+// MARK: - FitnessCentresDatum
+struct FitnessCentresDatum: Codable {
+    let averageRating: Double?
+    let coverimage: String?
+    let location, slug: String?
+    let id: Int?
+    let categorytags: [String]?
+    let category: String?
+    let totalRatingCount: Int?
+    let flags: DatumFlagsClass?
+    let commercial: String?
+    let featured: Bool?
+    let offeringImages: [OfferingImage]?
+    let trialHeader, membershipHeader: String?
+    let membershipIcon: String?
+    let membershipOfferDefault: Bool?
+    let membershipOffer, type, address, title: String?
+    let subcategories: [String]?
+    let tagImage: String?
+    let abwVendor: String?
+}
+
+// MARK: - DatumFlagsClass
+struct DatumFlagsClass: Codable {
+    let trial, membership: String?
+    let topSelling, newlyLaunched, openingSoon, comingOnOnepass: Bool?
+    let state: String?
+    let featured, april5, notAvailableOnOnepass, forcedOnOnepass: Bool?
+    let liteClasspassAvailable: Bool?
+    let covidState: String?
+    let covidStateID: Int?
+    let covidStateImmediately: Bool?
+    let monsoonFlashDiscount: String?
+    let monsoonFlashDiscountPer: Int?
+    let monsoonFlashDiscountDisabled: Bool?
+    let hyperLocalList: [String]?
+}
+
+// MARK: - OfferingImage
+struct OfferingImage: Codable {
+    let image: String?
+    let height, width: Int?
+}
 
 // MARK: - Categories
 struct Categories: Codable {

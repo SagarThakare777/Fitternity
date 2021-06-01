@@ -29,6 +29,8 @@
 		B032501C2663DC7E0004B73E /* SubCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032501A2663DC7E0004B73E /* SubCategoryCollectionViewCell.swift */; };
 		B032501D2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B032501B2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib */; };
 		B03250202663E6A00004B73E /* HomeScreenInStudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032501F2663E6A00004B73E /* HomeScreenInStudioModel.swift */; };
+		B0330C882665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */; };
+		B0330C892665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		B032501A2663DC7E0004B73E /* SubCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B032501B2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		B032501F2663E6A00004B73E /* HomeScreenInStudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInStudioModel.swift; sourceTree = "<group>"; };
+		B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCentersCollectionViewCell.swift; sourceTree = "<group>"; };
+		B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FitnessCentersCollectionViewCell.xib; sourceTree = "<group>"; };
 		F992DD339CA8CED65CF95CD5 /* Pods_Its_Fitternity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Its_Fitternity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,8 @@
 				B032501B2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib */,
 				B0088D9326654FA900470B07 /* WorkOutInStudioCollectionViewCell.swift */,
 				B0088D9426654FA900470B07 /* WorkOutInStudioCollectionViewCell.xib */,
+				B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */,
+				B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0330C892665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib in Resources */,
 				B032501D2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib in Resources */,
 				B03250182663DA3C0004B73E /* CategoryCollectionViewCell.xib in Resources */,
 				B0324F9526635E150004B73E /* LaunchScreen.storyboard in Resources */,
@@ -295,6 +302,7 @@
 				B0324FAC26636F3B0004B73E /* DiscoverEventsVC.swift in Sources */,
 				B0324FB5266374E90004B73E /* Utilities.swift in Sources */,
 				B0324FA8266368810004B73E /* SceneDelegate.swift in Sources */,
+				B0330C882665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift in Sources */,
 				B03250172663DA3C0004B73E /* CategoryCollectionViewCell.swift in Sources */,
 				B0324FB8266375960004B73E /* Constants.swift in Sources */,
 				B03250202663E6A00004B73E /* HomeScreenInStudioModel.swift in Sources */,
