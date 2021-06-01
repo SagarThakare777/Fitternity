@@ -31,6 +31,8 @@ class WorkOutInStudioCollectionViewCell: UICollectionViewCell {
     //MARK:- Variables
     var arrCategory             : Categories?
     var arrfitness_centres      : fitness_centres?
+    var arrPersonalTraning      : personal_training?
+    
     var arrCampaign             : [CampaignElement]?
     var arrCategoryTags         : [Categorytag]?
     var arrFitnessCenters       : [FitnessCentresDatum]?

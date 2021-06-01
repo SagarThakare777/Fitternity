@@ -12,10 +12,18 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
     //MARK:- Outlets
     //  1. CollectionView
     @IBOutlet weak var bannerCollectionView: UICollectionView!
+    //  2. Image
+    @IBOutlet weak var imgPersonalTraning: UIImageView!
+    //  3. Label
+    @IBOutlet weak var lblOnlineTraning: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    
     
     //MARK:- Variables
     var arrCategory             : Categories?
     var arrfitness_centres      : fitness_centres?
+    var arrPersonalTraning      : personal_training?
+    
     var arrCampaign             : [CampaignElement]?
     var arrCategoryTags         : [Categorytag]?
     var arrFitnessCenters       : [FitnessCentresDatum]?
@@ -28,6 +36,14 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         self.configCollectionView()
+        
+        /*
+        self.lblOnlineTraning.text = self.arrPersonalTraning?.title
+        self.lblDescription.text = self.arrPersonalTraning.debugDescription
+        self.imgPersonalTraning.sd_setShowActivityIndicatorView(true)
+        self.imgPersonalTraning.sd_setIndicatorStyle(.medium)
+        self.imgPersonalTraning.sd_setImage(with: URL(string: self.arrPersonalTraning?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
+        */
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNextScreen), userInfo: nil, repeats: true)
     }
     

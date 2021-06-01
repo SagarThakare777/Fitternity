@@ -33,6 +33,7 @@ class DiscoverEventsVC: UIViewController {
     //MARK:- Variables
     var arrCategory             : Categories?
     var arrfitness_centres      : fitness_centres?
+    var arrPersonalTraning      : personal_training?
     
     var arrProductTag           : [product_tags]?
     var arrCampaign             : [CampaignElement]?
@@ -86,7 +87,6 @@ class DiscoverEventsVC: UIViewController {
         self.imgHome.tintColor      = color.blackColor
         self.lblHome.textColor      = color.blackColor
         self.isWorkOutInStudio      = true
-        self.multipleDataCollectionView.isHidden = false
         self.getHomeScreenInStudioAPICall()
     }
     //  4. Workout Home UI Update
@@ -100,7 +100,6 @@ class DiscoverEventsVC: UIViewController {
         self.imgShop.tintColor      = color.blackColor
         self.lblShop.textColor      = color.blackColor
         self.isWorkOutInStudio      = false
-        self.multipleDataCollectionView.isHidden = true
         self.getHomeScreenAtHomeAPICall()
     }
     //MARK:- All Button Action
@@ -168,6 +167,7 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
                 cellMultipleData.arrfitness_centres = self.arrfitness_centres
                 cellMultipleData.arrCategory        = self.arrCategory
                 cellMultipleData.arrCampaign        = self.arrCampaign
+                cellMultipleData.arrPersonalTraning = self.arrPersonalTraning
                 cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
                 cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
                 cellMultipleData.bannerCollectionView.reloadData()
@@ -183,6 +183,7 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
                 cellMultipleData.arrfitness_centres = self.arrfitness_centres
                 cellMultipleData.arrCategory        = self.arrCategory
                 cellMultipleData.arrCampaign        = self.arrCampaign
+                cellMultipleData.arrPersonalTraning = self.arrPersonalTraning
                 cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
                 cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
                 cellMultipleData.bannerCollectionView.reloadData()
@@ -215,13 +216,13 @@ extension DiscoverEventsVC {
                     DispatchQueue.main.async {
                         self.arrfitness_centres = response.value?.fitness_centres
                         self.arrCampaign    = response.value?.campaigns
+                        self.arrPersonalTraning = response.value?.personal_training
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
                         self.arrOnePassPre  = response.value?.onepassPre
                         self.productTagCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()
-                        self.configCollectionView()
                     }
                 }
             case .failure(let error):
@@ -240,12 +241,11 @@ extension DiscoverEventsVC {
                 print(successData)
                 KVNProgress.dismiss()
                 
-//                self.arrCampaign?.removeAll()
-//                self.arrProductTag?.removeAll()
                 if ((response.data) != nil) {
                     DispatchQueue.main.async {
                         self.arrfitness_centres = response.value?.fitness_centres
                         self.arrCampaign    = response.value?.campaigns
+                        self.arrPersonalTraning = response.value?.personal_training
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data

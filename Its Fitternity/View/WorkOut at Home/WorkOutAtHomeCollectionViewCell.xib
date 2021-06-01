@@ -127,6 +127,9 @@
             <size key="customSize" width="338" height="389"/>
             <connections>
                 <outlet property="bannerCollectionView" destination="P7e-EK-cgs" id="TzK-je-PhN"/>
+                <outlet property="imgPersonalTraning" destination="No0-2I-bId" id="O50-dl-VkL"/>
+                <outlet property="lblDescription" destination="0zX-6x-QSQ" id="fHU-sc-EeV"/>
+                <outlet property="lblOnlineTraning" destination="Oo4-Bi-NTg" id="h24-Nw-dZi"/>
             </connections>
             <point key="canvasLocation" x="337.68115942028987" y="215.95982142857142"/>
         </collectionViewCell>

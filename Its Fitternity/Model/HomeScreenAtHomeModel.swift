@@ -16,7 +16,7 @@ struct HomeScreenAtHomeDataModel: Codable {
      let campaigns: [CampaignElement]?
      let categories: Categories?
      let onepassPre: OnepassPre?
-     let personalTraining: PersonalTraining?
+     let personal_training: personal_training?
      let upcomingClasses: UpcomingClasses?
      let fitness_centres: fitness_centres?
      let challenge: Challenge?
@@ -164,7 +164,7 @@ struct Categorytag: Codable {
  }
 
  // MARK: - PersonalTraining
- struct PersonalTraining: Codable {
+ struct personal_training: Codable {
      let title, subtitle, personalTrainingDescription: String?
      let image: String?
      let buttonText: String?
