@@ -25,6 +25,7 @@ struct CollectionViewCellIdentifire {
     static let kWorkOutInStudioCollectionViewCell   = "WorkOutInStudioCollectionViewCell"
     static let kWorkOutAtHomeCollectionViewCell     = "WorkOutAtHomeCollectionViewCell"
     static let kFitnessCentersCollectionViewCell    = "FitnessCentersCollectionViewCell"
+    static let kUpcomingOnlieSessionsCollectionViewCell = "UpcomingOnlieSessionsCollectionViewCell"
 }
 
 struct color {

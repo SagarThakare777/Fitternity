@@ -10,6 +10,8 @@
 		35D23732B6AF4FB9CF48C0A6 /* Pods_Its_Fitternity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F992DD339CA8CED65CF95CD5 /* Pods_Its_Fitternity.framework */; };
 		B0088D9526654FA900470B07 /* WorkOutInStudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0088D9326654FA900470B07 /* WorkOutInStudioCollectionViewCell.swift */; };
 		B0088D9626654FA900470B07 /* WorkOutInStudioCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0088D9426654FA900470B07 /* WorkOutInStudioCollectionViewCell.xib */; };
+		B00F33BE266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F33BC266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.swift */; };
+		B00F33BF266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00F33BD266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.xib */; };
 		B0324F8926635E130004B73E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0324F8826635E130004B73E /* AppDelegate.swift */; };
 		B0324F9026635E130004B73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0324F8E26635E130004B73E /* Main.storyboard */; };
 		B0324F9226635E150004B73E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0324F9126635E150004B73E /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		89160F6D96DA3F7D01F36842 /* Pods-Its Fitternity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Its Fitternity.release.xcconfig"; path = "Target Support Files/Pods-Its Fitternity/Pods-Its Fitternity.release.xcconfig"; sourceTree = "<group>"; };
 		B0088D9326654FA900470B07 /* WorkOutInStudioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutInStudioCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0088D9426654FA900470B07 /* WorkOutInStudioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkOutInStudioCollectionViewCell.xib; sourceTree = "<group>"; };
+		B00F33BC266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingOnlieSessionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B00F33BD266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingOnlieSessionsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B02BEB49E74D8743F78185FA /* Pods-Its Fitternity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Its Fitternity.debug.xcconfig"; path = "Target Support Files/Pods-Its Fitternity/Pods-Its Fitternity.debug.xcconfig"; sourceTree = "<group>"; };
 		B0324F8526635E130004B73E /* Its Fitternity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Its Fitternity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0324F8826635E130004B73E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				B032501B2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib */,
 				B0330C862665F2A90097F7E4 /* FitnessCentersCollectionViewCell.swift */,
 				B0330C872665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib */,
+				B00F33BC266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.swift */,
+				B00F33BD266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				B0330C892665F2A90097F7E4 /* FitnessCentersCollectionViewCell.xib in Resources */,
 				B032501D2663DC7E0004B73E /* SubCategoryCollectionViewCell.xib in Resources */,
 				B03250182663DA3C0004B73E /* CategoryCollectionViewCell.xib in Resources */,
+				B00F33BF266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.xib in Resources */,
 				B0324F9526635E150004B73E /* LaunchScreen.storyboard in Resources */,
 				B051B48A2666D72C00960627 /* WorkOutAtHomeCollectionViewCell.xib in Resources */,
 				B0324F9226635E150004B73E /* Assets.xcassets in Resources */,
@@ -332,6 +339,7 @@
 				B03250202663E6A00004B73E /* HomeScreenInStudioModel.swift in Sources */,
 				B0324FEE266386920004B73E /* HomeScreenAtHomeModel.swift in Sources */,
 				B0324FEB266381720004B73E /* NetworkRouter.swift in Sources */,
+				B00F33BE266774C4005A1F1D /* UpcomingOnlieSessionsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

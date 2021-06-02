@@ -12,6 +12,7 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
     //MARK:- Outlets
     //  1. CollectionView
     @IBOutlet weak var bannerCollectionView: UICollectionView!
+    @IBOutlet weak var upcomingOnlineCollectionView: UICollectionView!
     //  2. Image
     @IBOutlet weak var imgPersonalTraning: UIImageView!
     //  3. Label
@@ -30,6 +31,7 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
     var arrCategory             : Categories?
     var arrfitness_centres      : fitness_centres?
     var arrPersonalTraning      : personal_training?
+    //var arrUpcomingClasses      : upcoming_classes?
     
     var arrCampaign             : [CampaignElement]?
     var arrCategoryTags         : [Categorytag]?
@@ -69,6 +71,13 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
         self.bannerCollectionView.delegate = self
         self.bannerCollectionView.dataSource = self
         self.bannerCollectionView.reloadData()
+        
+        
+        self.upcomingOnlineCollectionView.register(UINib(nibName: CollectionViewCellIdentifire.kUpcomingOnlieSessionsCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: CollectionViewCellIdentifire.kUpcomingOnlieSessionsCollectionViewCell)
+        
+        self.upcomingOnlineCollectionView.delegate = self
+        self.upcomingOnlineCollectionView.dataSource = self
+        self.upcomingOnlineCollectionView.reloadData()
     }
 }
 //MARK:- UICollectionView DataSource & Delegate
@@ -79,11 +88,22 @@ extension WorkOutAtHomeCollectionViewCell: UICollectionViewDataSource,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == bannerCollectionView {
             return self.arrCampaign?.count ?? 0
+        }
+        else {
+            return 7//self.arrUpcomingClasses?.data?.count ?? 0
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if collectionView == bannerCollectionView {
         return CGSize(width: 342, height: 173)
+        }
+        else {
+            return CGSize(width: (upcomingOnlineCollectionView.frame.size.width) / 4, height: (upcomingOnlineCollectionView.frame.size.width)/5 - 10)
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 17.5, left: 5, bottom: 17.5, right: 5)
@@ -95,12 +115,23 @@ extension WorkOutAtHomeCollectionViewCell: UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cellBanner: BannerCollectionViewCell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: CollectionViewCellIdentifire.kBannerCollectionViewCell, for: indexPath) as! BannerCollectionViewCell
-        
-        let data = self.arrCampaign?[indexPath.item]
-        
-        cellBanner.imgBanner.sd_setImage(with: URL(string: data?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
-        return cellBanner
+        if collectionView == bannerCollectionView {
+            let cellBanner: BannerCollectionViewCell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CollectionViewCellIdentifire.kBannerCollectionViewCell, for: indexPath) as! BannerCollectionViewCell
+            
+            let data = self.arrCampaign?[indexPath.item]
+            
+            cellBanner.imgBanner.sd_setImage(with: URL(string: data?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
+            return cellBanner
+        }
+        else {
+            let cellBanner: UpcomingOnlieSessionsCollectionViewCell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CollectionViewCellIdentifire.kUpcomingOnlieSessionsCollectionViewCell, for: indexPath) as! UpcomingOnlieSessionsCollectionViewCell
+            
+//            let data = self.arrUpcomingClasses?.data?[indexPath.item]
+//            
+//            cellBanner.imgCover.sd_setImage(with: URL(string: data?.coverimage ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
+            return cellBanner
+        }
     }
 }

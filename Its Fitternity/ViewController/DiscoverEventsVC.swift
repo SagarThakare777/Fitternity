@@ -195,6 +195,7 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
                 cellMultipleData.arrPersonalTraning = self.arrPersonalTraning
                 cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
                 cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
+                //cellMultipleData.arrUpcomingClasses = self.arrUpcomingClasses
             
                 cellMultipleData.lblOnlineTraning.text  = self.arrPersonalTraning?.title
                 cellMultipleData.lblDescription.text    = self.arrPersonalTraning?.description
@@ -206,6 +207,7 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
                 
                 
                 cellMultipleData.bannerCollectionView.reloadData()
+                cellMultipleData.upcomingOnlineCollectionView.reloadData()
                 return cellMultipleData
             }
         }
@@ -236,6 +238,7 @@ extension DiscoverEventsVC {
                         self.arrfitness_centres = response.value?.fitness_centres
                         self.arrCampaign    = response.value?.campaigns
                         self.arrPersonalTraning = response.value?.personal_training
+                        //self.arrUpcomingClasses = response.value?.upcomingClasses
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
@@ -265,6 +268,7 @@ extension DiscoverEventsVC {
                         self.arrfitness_centres = response.value?.fitness_centres
                         self.arrCampaign    = response.value?.campaigns
                         self.arrPersonalTraning = response.value?.personal_training
+                        //self.arrUpcomingClasses = response.value?.upcomingClasses
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
