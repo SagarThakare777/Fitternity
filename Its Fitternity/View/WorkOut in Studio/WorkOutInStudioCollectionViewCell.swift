@@ -36,7 +36,7 @@ class WorkOutInStudioCollectionViewCell: UICollectionViewCell {
     var arrCampaign             : [CampaignElement]?
     var arrCategoryTags         : [Categorytag]?
     var arrFitnessCenters       : [FitnessCentresDatum]?
-    var arrOnePassPre           : OnepassPre?
+    var arrOnePassPre           : onepass_pre?
     
     var timer                   : Timer?
     var currentCellIndex        = 0
@@ -47,18 +47,8 @@ class WorkOutInStudioCollectionViewCell: UICollectionViewCell {
         
         // Initialization code
         self.configCollectionView()
-        
-        /*
-        self.lblDiscover.text       = self.arrCategory?.title
-        self.lblExploreGym.text     = self.arrCategory?.text
-        self.lblFitnessCenter.text  = self.arrfitness_centres?.title
-        self.lblCheck.text          = self.arrfitness_centres.debugDescription
-        */
-        self.imgOnePass.decorateView(cornerRadius: 30, borderWidth: 1, borderColor: .clear)
+        self.imgOnePass.decorateView(cornerRadius: 25, borderWidth: 1, borderColor: .clear)
         self.vwBuyNow.decorateView(cornerRadius: 5, borderWidth: 1, borderColor: .clear)
-        self.imgOnePass.sd_setImage(with: URL(string: self.arrOnePassPre?.passes?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "download"))
-        self.imgMainOnePass.sd_setImage(with: URL(string: self.arrOnePassPre?.headerImg ?? ""), placeholderImage: #imageLiteral(resourceName: "download"))
-        
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNextScreen), userInfo: nil, repeats: true)
     }
     
@@ -119,11 +109,7 @@ extension WorkOutInStudioCollectionViewCell: UICollectionViewDataSource,UICollec
             return 0
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: categoryCollectionView.frame.size.width, height: 180)
-//    }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
          if collectionView == bannerCollectionView {

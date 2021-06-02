@@ -15,7 +15,7 @@ struct HomeScreenAtHomeDataModel: Codable {
      let product_tags: [product_tags]?
      let campaigns: [CampaignElement]?
      let categories: Categories?
-     let onepassPre: OnepassPre?
+     let onepass_pre: onepass_pre?
      let personal_training: personal_training?
      let upcomingClasses: UpcomingClasses?
      let fitness_centres: fitness_centres?
@@ -36,7 +36,7 @@ struct HomeScreenAtHomeDataModel: Codable {
 
 // MARK: - FitnessCentres
 struct fitness_centres: Codable {
-    let title, fitnessCentresDescription, buttonText: String?
+    let title, description, buttonText: String?
     let data: [FitnessCentresDatum]?
 }
 
@@ -149,8 +149,8 @@ struct Categorytag: Codable {
  }
 
  // MARK: - OnepassPre
- struct OnepassPre: Codable {
-     let headerImg: String?
+ struct onepass_pre: Codable {
+     let header_img: String?
      let buttonText: String?
      let passes: Passes?
      let campaign: ChallengeCampaign?
@@ -165,7 +165,7 @@ struct Categorytag: Codable {
 
  // MARK: - PersonalTraining
  struct personal_training: Codable {
-     let title, subtitle, personalTrainingDescription: String?
+     let title, subtitle, description: String?
      let image: String?
      let buttonText: String?
      let link: String?

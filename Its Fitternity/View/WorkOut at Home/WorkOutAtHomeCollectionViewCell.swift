@@ -17,7 +17,14 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
     //  3. Label
     @IBOutlet weak var lblOnlineTraning: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
-    
+    //  4. Button
+    @IBOutlet weak var btnPersonalTraining: UIButton!
+    @IBOutlet weak var btnUpcomingOnline: UIButton!
+    @IBOutlet weak var btnGetFlat50: UIButton!
+    @IBOutlet weak var btnStayTunedFor: UIButton!
+    //  4. Image
+    @IBOutlet weak var imgOnePass: UIImageView!
+    @IBOutlet weak var imgMainOnePass: UIImageView!
     
     //MARK:- Variables
     var arrCategory             : Categories?
@@ -27,23 +34,17 @@ class WorkOutAtHomeCollectionViewCell: UICollectionViewCell {
     var arrCampaign             : [CampaignElement]?
     var arrCategoryTags         : [Categorytag]?
     var arrFitnessCenters       : [FitnessCentresDatum]?
-    var arrOnePassPre           : OnepassPre?
+    var arrOnePassPre           : onepass_pre?
     
     var timer                   : Timer?
     var currentCellIndex        = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
         self.configCollectionView()
-        
-        /*
-        self.lblOnlineTraning.text = self.arrPersonalTraning?.title
-        self.lblDescription.text = self.arrPersonalTraning.debugDescription
-        self.imgPersonalTraning.sd_setShowActivityIndicatorView(true)
-        self.imgPersonalTraning.sd_setIndicatorStyle(.medium)
-        self.imgPersonalTraning.sd_setImage(with: URL(string: self.arrPersonalTraning?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
-        */
+        self.imgPersonalTraning.decorateView(cornerRadius: 10, borderWidth: 1, borderColor: .clear)
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNextScreen), userInfo: nil, repeats: true)
     }
     

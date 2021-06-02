@@ -34,11 +34,12 @@ class DiscoverEventsVC: UIViewController {
     var arrCategory             : Categories?
     var arrfitness_centres      : fitness_centres?
     var arrPersonalTraning      : personal_training?
+    //var arrUpcomingClasses      : upcoming_classes?
     
     var arrProductTag           : [product_tags]?
     var arrCampaign             : [CampaignElement]?
     var arrFitnessCenters       : [FitnessCentresDatum]?
-    var arrOnePassPre           : OnepassPre?
+    var arrOnePassPre           : onepass_pre?
     var isWorkOutInStudio       : Bool = true
     
     
@@ -170,6 +171,14 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
                 cellMultipleData.arrPersonalTraning = self.arrPersonalTraning
                 cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
                 cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
+                
+                cellMultipleData.lblDiscover.text       = self.arrCategory?.title
+                cellMultipleData.lblExploreGym.text     = self.arrCategory?.text
+                cellMultipleData.lblFitnessCenter.text  = self.arrfitness_centres?.title
+                cellMultipleData.lblCheck.text          = self.arrfitness_centres?.description
+                cellMultipleData.imgOnePass.sd_setImage(with: URL(string: self.arrOnePassPre?.passes?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "download"))
+                cellMultipleData.imgMainOnePass.sd_setImage(with: URL(string: self.arrOnePassPre?.header_img ?? ""), placeholderImage: #imageLiteral(resourceName: "download"))
+                
                 cellMultipleData.bannerCollectionView.reloadData()
                 cellMultipleData.categoryCollectionView.reloadData()
                 cellMultipleData.fitnessCentersCollectionView.reloadData()
@@ -186,6 +195,16 @@ extension DiscoverEventsVC: UICollectionViewDataSource,UICollectionViewDelegate,
                 cellMultipleData.arrPersonalTraning = self.arrPersonalTraning
                 cellMultipleData.arrCategoryTags    = self.arrCategory?.categorytags
                 cellMultipleData.arrFitnessCenters  = self.arrFitnessCenters
+            
+                cellMultipleData.lblOnlineTraning.text  = self.arrPersonalTraning?.title
+                cellMultipleData.lblDescription.text    = self.arrPersonalTraning?.description
+                cellMultipleData.imgPersonalTraning.sd_setShowActivityIndicatorView(true)
+                cellMultipleData.imgPersonalTraning.sd_setIndicatorStyle(.medium)
+                cellMultipleData.imgPersonalTraning.sd_setImage(with: URL(string: self.arrPersonalTraning?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "qr-code"))
+                cellMultipleData.imgOnePass.sd_setImage(with: URL(string: self.arrOnePassPre?.passes?.image ?? ""), placeholderImage: #imageLiteral(resourceName: "download"))
+                cellMultipleData.imgMainOnePass.sd_setImage(with: URL(string: self.arrOnePassPre?.header_img ?? ""), placeholderImage: #imageLiteral(resourceName: "download"))
+                
+                
                 cellMultipleData.bannerCollectionView.reloadData()
                 return cellMultipleData
             }
@@ -220,7 +239,7 @@ extension DiscoverEventsVC {
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
-                        self.arrOnePassPre  = response.value?.onepassPre
+                        self.arrOnePassPre  = response.value?.onepass_pre
                         self.productTagCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()
                     }
@@ -249,7 +268,7 @@ extension DiscoverEventsVC {
                         self.arrProductTag  = response.value?.product_tags
                         self.arrCategory    = response.value?.categories
                         self.arrFitnessCenters = response.value?.fitness_centres?.data
-                        self.arrOnePassPre  = response.value?.onepassPre
+                        self.arrOnePassPre  = response.value?.onepass_pre
                         self.productTagCollectionView.reloadData()
                         self.multipleDataCollectionView.reloadData()
                     }
